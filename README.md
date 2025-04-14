@@ -48,3 +48,9 @@ To create a standalone executable, use PyInstaller:
 ```bash
 pyinstaller --noconsole --onefile --hidden-import=plyer.platforms.win.notification drinkwater.py
 ```
+
+To create a executable:
+
+```bash
+pyinstaller --onefile --windowed drinkwater.py
+```
