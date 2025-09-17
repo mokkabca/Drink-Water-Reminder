@@ -1,56 +1,69 @@
-# Drink Water Reminder
+# 💧 Water Reminder App  
 
-![drinkwater](https://github.com/user-attachments/assets/cc559f3a-5c51-4fe3-9d0f-cbaaa8d7be46)
+A modern desktop app to remind you to drink water during the day.  
+Built with Python and CustomTkinter.  
 
+---
 
-## Overview
+## ✨ Features  
 
-Drink Water Reminder is a simple Python application designed to remind users to drink water throughout the day. It sends notifications at scheduled intervals and includes a system tray icon for easy access. The application utilizes the `plyer` library for cross-platform notifications and the `pystray` library for creating a system tray icon.
+- **Hourly Reminders**  
+  - Default schedule from **10 AM to 7 PM**  
+  - Customizable hour slots with checkboxes  
 
-## Features
+- **Modern UI**  
+  - Clean dark/light theme using **CustomTkinter**  
 
-- **Scheduled Reminders**: Receive notifications every hour from 10 AM to 7 PM, reminding you to drink water.
-- **System Tray Icon**: Runs in the background with a system tray icon for easy access and notifications.
-- **Base64 Icon Embedding**: The application embeds an icon directly into the code as a Base64 string, eliminating the need for external icon files.
-- **Cross-Platform Compatibility**: Built with Python, making it compatible with various operating systems.
+- **Notifications**  
+  - Windows **toast notification** in bottom-right  
+  - Popup window with reminder message, dismiss button, auto-close  
 
-## Dependencies
+- **Voice Alert**  
+  - Speaks “Time to drink water”  
+  - If system is muted, app temporarily unmutes, plays alert, then restores mute state  
 
-To run the application, ensure you have the following Python libraries installed:
+- **Do Not Disturb (DND)**  
+  - Toggle button to silence reminders  
 
-- `schedule`: For scheduling reminders.
-- `plyer`: For sending notifications.
-- `pystray`: For creating the system tray icon.
-- `Pillow`: For image processing.
+- **Minimize to Tray**  
+  - Closing the window hides it to tray instead of quitting  
+  - Tray menu options: Show, Toggle DND, Quit  
 
-You can install these dependencies using pip:
+- **Daily Counter**  
+  - Tracks how many times you drank water per day  
+  - Reset button to start fresh each day  
 
+---
+
+## 🛠 Tech Stack  
+
+- Python 3.10+  
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)  
+- [pyttsx3](https://pypi.org/project/pyttsx3/)  
+- [win10toast](https://pypi.org/project/win10toast/)  
+- [schedule](https://pypi.org/project/schedule/)  
+- [pystray](https://pypi.org/project/pystray/)  
+- [pycaw](https://github.com/AndreMiras/pycaw)  
+
+---
+
+## 📦 Installation  
+
+### 1. From Source (Python)  
+
+Clone this repo:
 ```bash
-pip install schedule plyer pystray Pillow
+git clone https://github.com/mokkabca/Drink-Water-Reminder.git
+
+cd water-reminder
 ```
 
-Clone the Repository:
+Install dependencies:
 ```bash
-git clone https://github.com/yourusername/drink-water-reminder.git
-cd drink-water-reminder
+pip install -r requirements.txt
 ```
 
-
-Run the Application:
+Run the app:
 ```bash
 python drinkwater.py
-```
-
-Create an Executable (optional):
-
-To create a standalone executable, use PyInstaller:
-
-```bash
-pyinstaller --noconsole --onefile --hidden-import=plyer.platforms.win.notification drinkwater.py
-```
-
-To create a executable:
-
-```bash
-pyinstaller --onefile --windowed drinkwater.py
 ```
