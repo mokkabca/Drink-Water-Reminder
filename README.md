@@ -67,3 +67,20 @@ Run the app:
 ```bash
 python drinkwater.py
 ```
+
+
+### 2. From EXE (Windows)
+
+Download the `.exe` from the Releases page.
+
+Double-click to run.
+
+Closing the window will minimize the app to the system tray.
+
+
+### ⚡ Auto-Start (Optional)
+
+To make the app start automatically when Windows boots:
+
+1. Press `Win + R` → type `shell:startup` → press Enter
+2. Copy water_reminder.exe into that folder
